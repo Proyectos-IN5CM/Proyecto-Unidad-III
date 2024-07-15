@@ -3,7 +3,7 @@ create database if not exists ProyectoUnidadIII;
 use ProyectoUnidadIII;
 
 create table Vuelos(
-	vueloId int not null auto_increment,
+    vueloId int not null auto_increment,
     numeroVuelo int not null,
     origen varchar(100),
     destino varchar(100),
