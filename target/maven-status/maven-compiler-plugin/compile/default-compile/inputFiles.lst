@@ -1,6 +1,3 @@
-C:\Users\informatica\Documents\Repositorios IN5CM\JakartaEE-Template\src\main\java\Main.java
-C:\Users\informatica\Documents\Repositorios IN5CM\JakartaEE-Template\src\main\java\org\diegomonterroso\webapp\model\Producto.java
-C:\Users\informatica\Documents\Repositorios IN5CM\JakartaEE-Template\src\main\java\org\diegomonterroso\webapp\service\ProductoService.java
-C:\Users\informatica\Documents\Repositorios IN5CM\JakartaEE-Template\src\main\java\org\diegomonterroso\webapp\service\IProductoService.java
-C:\Users\informatica\Documents\Repositorios IN5CM\JakartaEE-Template\src\main\java\org\diegomonterroso\webapp\servlet\ProductoServlet.java
-C:\Users\informatica\Documents\Repositorios IN5CM\JakartaEE-Template\src\main\java\org\diegomonterroso\webapp\util\JpaUtil.java
+C:\Users\USUARIO\Desktop\Repositorio\src\main\java\org\diegomonterroso\webapp\entity\Vuelo.java
+C:\Users\USUARIO\Desktop\Repositorio\src\main\java\org\diegomonterroso\webapp\servlet\VueloServlet.java
+C:\Users\USUARIO\Desktop\Repositorio\src\main\java\org\diegomonterroso\webapp\service\IVueloService.java
