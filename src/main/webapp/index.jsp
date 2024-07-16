@@ -25,7 +25,7 @@
                                 <a class="nav-link active" aria-current="page" href="../index.jsp">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./producto-servlet">Lista de Productos</a>
+                                <a class="nav-link" href="./vuelo-servlet">Lista de Vuelos</a>
                             </li>
                         </ul>
                     </div>

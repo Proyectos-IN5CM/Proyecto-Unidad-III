@@ -1,7 +1,7 @@
 package org.diegomonterroso.webapp.service;
 
 import java.util.List;
-import org.diegomonterroso.webapp.entity.Vuelo;
+import org.diegomonterroso.webapp.model.Vuelo;
 
 public interface IVueloService {
     
