@@ -27,6 +27,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="./vuelo-servlet">Lista de Vuelos</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./avion-servlet">Lista de Aviones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./clase-servlet">Lista de Clases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./empleado-servlet">Lista de Empleados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pasajero-servlet">Lista de Pasajeros</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

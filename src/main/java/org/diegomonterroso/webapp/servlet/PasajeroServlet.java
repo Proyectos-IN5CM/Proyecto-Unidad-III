@@ -8,26 +8,26 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import org.diegomonterroso.webapp.model.Vuelo;
-import org.diegomonterroso.webapp.service.VueloService;
+import org.diegomonterroso.webapp.model.Pasajero;
+import org.diegomonterroso.webapp.service.PasajeroService;
 
-@WebServlet("/vuelo-servlet")
+@WebServlet("/pasajero-servlet")
 @MultipartConfig
 
-public class VueloServlet extends HttpServlet{
+public class PasajeroServlet extends HttpServlet{
     
-    private VueloService vs;
+    private PasajeroService ps;
     
     @Override
     public void init() throws ServletException{
         super.init();
-        this.vs = new VueloService();
+        this.ps = new PasajeroService();
     }
     
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Vuelo> vuelos = vs.listarVuelos();
-        req.setAttribute("vuelos",vuelos);
-        req.getRequestDispatcher("/lista-vuelos/lista-vuelos.jsp").forward(req, resp);
+        List<Pasajero> pasajeros = ps.listarPasajeros();
+        req.setAttribute("pasajeros",pasajeros);
+        req.getRequestDispatcher("/lista-pasajeros/lista-pasajeros.jsp").forward(req, resp);
     }
 }

@@ -8,6 +8,7 @@ import jakarta.persistence.Table;
 
 @Table(name = "Vuelos")
 @Entity
+
 public class Vuelo {
 
     @Id
