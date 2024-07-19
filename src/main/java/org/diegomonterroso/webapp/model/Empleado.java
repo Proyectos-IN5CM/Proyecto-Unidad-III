@@ -17,14 +17,14 @@ public class Empleado {
     private String nombre;
     private String apellido;
     private String puesto;
-    private String salario;
+    private Double salario;
     private String contactoTelefono;
     private String contactoEmail;
 
     public Empleado() {
     }
 
-    public Empleado(String nombre, String apellido, String puesto, String salario, String contactoTelefono, String contactoEmail) {
+    public Empleado(String nombre, String apellido, String puesto, Double salario, String contactoTelefono, String contactoEmail) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.puesto = puesto;
@@ -33,7 +33,7 @@ public class Empleado {
         this.contactoEmail = contactoEmail;
     }
 
-    public Empleado(int empleadoId, String nombre, String apellido, String puesto, String salario, String contactoTelefono, String contactoEmail) {
+    public Empleado(int empleadoId, String nombre, String apellido, String puesto, Double salario, String contactoTelefono, String contactoEmail) {
         this.empleadoId = empleadoId;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -75,11 +75,11 @@ public class Empleado {
         this.puesto = puesto;
     }
 
-    public String getSalario() {
+    public Double getSalario() {
         return salario;
     }
 
-    public void setSalario(String salario) {
+    public void setSalario(Double salario) {
         this.salario = salario;
     }
 

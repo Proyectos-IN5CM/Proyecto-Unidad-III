@@ -10,7 +10,7 @@
     <body class="bg-info-subtle">
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Bienvenido al inicio!</a>
+                <a class="navbar-brand" href="#">Bienvenido al Sistema de Gestión del Aeropuerto!</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -32,6 +32,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./clase-servlet">Lista de Clases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./formulario-empleados/formulario-empleados.jsp">Formulario de Empleados</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./empleado-servlet">Lista de Empleados</a>

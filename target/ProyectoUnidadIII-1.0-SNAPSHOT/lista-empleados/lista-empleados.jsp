@@ -31,6 +31,9 @@
                                 <a class="nav-link" href="empleado-servlet">Lista de Empleados</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="./formulario-empleados/formulario-empleados.jsp">Formulario de Empleados</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="./vuelo-servlet">Lista de Vuelos</a>
                             </li>
                             <li class="nav-item">

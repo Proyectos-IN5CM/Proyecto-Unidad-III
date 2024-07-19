@@ -1,6 +1,7 @@
 package org.diegomonterroso.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.diegomonterroso.webapp.model.Empleado;
 import org.diegomonterroso.webapp.util.JpaUtil;
@@ -19,8 +20,19 @@ public class EmpleadoService implements IEmpleadoService{
     }
 
     @Override
-    public void agregarEmpleado() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void agregarEmpleado(Empleado empleado) {
+        EntityTransaction transaction = em.getTransaction();
+        
+        try{
+            transaction.begin();
+            em.persist(empleado);
+            transaction.commit();
+        }catch(Exception e){
+            if(transaction.isActive()){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
     }
 
     @Override
