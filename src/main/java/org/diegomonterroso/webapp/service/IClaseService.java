@@ -7,7 +7,7 @@ public interface IClaseService {
     
     public List<Clase> listarClases();
     
-    public void agregarClase();
+    public void agregarClase(Clase clase);
     
     public void eliminarClase(int claseId);
     
