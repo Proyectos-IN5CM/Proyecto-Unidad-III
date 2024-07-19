@@ -39,6 +39,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="./pasajero-servlet">Lista de Pasajeros</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./formulario-vuelos/formulario-vuelos.jsp">Formulario de Vuelos</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
