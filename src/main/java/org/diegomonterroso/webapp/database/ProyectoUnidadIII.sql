@@ -6,7 +6,6 @@ use ProyectoUnidadIII;
 
 create table Vuelos(
     vueloId int not null auto_increment,
-    numeroVuelo int not null,
     origen varchar(100) not null,
     destino varchar(100) not null,
     aerolinea varchar(100) not null,

@@ -9,10 +9,10 @@ use ProyectoUnidadIII;
 -- VUELOS --
 
 Delimiter $$
-create procedure sp_agregarVuelo(num int, ori varchar(100), des varchar(100), aer varchar(100))
+create procedure sp_agregarVuelo(ori varchar(100), des varchar(100), aer varchar(100))
 Begin
-	insert into Vuelos(numeroVuelo, origen, destino, aerolinea) values
-		(num, ori, des, aer);
+	insert into Vuelos(origen, destino, aerolinea) values
+		(ori, des, aer);
 End $$
 Delimiter ;
 
@@ -21,7 +21,6 @@ Create procedure sp_ListarVuelos()
 Begin
 	Select
 		Vuelos.vueloId,
-		Vuelos.numeroVuelo,
 		Vuelos.origen,
 		Vuelos.destino,
         Vuelos.aerolinea
@@ -42,7 +41,6 @@ Create procedure sp_BuscarVuelo(In vueId int)
 Begin
 	Select
 		Vuelos.vueloId,
-		Vuelos.numeroVuelo,
 		Vuelos.origen,
 		Vuelos.destino,
         Vuelos.aerolinea
@@ -52,11 +50,10 @@ End$$
 Delimiter ;
 
 Delimiter $$
-Create procedure sp_EditarVuelo(In vueId int, In num int, In ori varchar(100) , In des varchar(100), In aer varchar(100))
+Create procedure sp_EditarVuelo(In vueId int, In ori varchar(100) , In des varchar(100), In aer varchar(100))
 Begin
 	Update Vuelos
 		Set
-			numeroVuelo = num,
 			origen = ori,
 			destino = des,
 			aerolinea = aer

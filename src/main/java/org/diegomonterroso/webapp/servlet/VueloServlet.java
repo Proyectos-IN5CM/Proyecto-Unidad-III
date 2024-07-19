@@ -41,13 +41,12 @@ public class VueloServlet extends HttpServlet{
     }
     
     public void agregarVuelo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        int numeroVuelo = Integer.parseInt(req.getParameter("numeroDeVuelo"));
-        String origen = req.getParameter("Origen");
-        String destino = req.getParameter("Destino");
-        String aerolinea = req.getParameter("Aerolinea");
+        String origen = req.getParameter("origen");
+        String destino = req.getParameter("destino");
+        String aerolinea = req.getParameter("aerolinea");
         
-        vs.agregarVuelo(new Vuelo(numeroVuelo,origen,destino,aerolinea));
+        vs.agregarVuelo(new Vuelo(origen, destino, aerolinea));
         
-        resp.sendRedirect("/ProyectoUnidadIII/index.jsp");
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
     }
 }

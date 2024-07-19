@@ -54,7 +54,6 @@
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Numero de Vuelo</th>
                             <th scope="col">Origen</th>
                             <th scope="col">Destino</th>
                             <th scope="col">Aerolinea</th>
@@ -66,7 +65,6 @@
                             <% for(Vuelo vuelo:vuelos){%>
                                 <tr>
                                     <th scope="row"><%=vuelo.getVueloId()%></th>
-                                    <td><%=vuelo.getNumeroVuelo()%></td>
                                     <td><%=vuelo.getOrigen()%></td>
                                     <td><%=vuelo.getDestino()%></td>
                                     <td><%=vuelo.getAerolinea()%></td>

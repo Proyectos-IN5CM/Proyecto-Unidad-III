@@ -7,7 +7,7 @@ public interface IEmpleadoService {
     
     public List<Empleado> listarEmpleados();
     
-    public void agregarEmpleado();
+    public void agregarEmpleado(Empleado empleado);
     
     public void eliminarEmpleado(int empleadoId);
     
