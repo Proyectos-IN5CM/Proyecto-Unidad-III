@@ -28,16 +28,31 @@
                                 <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="./formulario-vuelos/formulario-vuelos.jsp">Formulario de Vuelos</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="vuelo-servlet">Lista de Vuelos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./formulario-aviones/formulario-aviones.jsp">Formulario de Aviones</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./avion-servlet">Lista de Aviones</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="./formulario-clases/formulario-clases.jsp">Formulario de Clases</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="./clase-servlet">Lista de Clases</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="./formulario-empleados/formulario-empleados.jsp">Formulario de Empleados</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="./empleado-servlet">Lista de Empleados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./formulario-pasajeros/formulario-pasajeros.jsp">Formulario de Pasajeros</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./pasajero-servlet">Lista de Pasajeros</a>
@@ -54,7 +69,6 @@
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Numero de Vuelo</th>
                             <th scope="col">Origen</th>
                             <th scope="col">Destino</th>
                             <th scope="col">Aerolinea</th>
@@ -66,7 +80,6 @@
                             <% for(Vuelo vuelo:vuelos){%>
                                 <tr>
                                     <th scope="row"><%=vuelo.getVueloId()%></th>
-                                    <td><%=vuelo.getNumeroVuelo()%></td>
                                     <td><%=vuelo.getOrigen()%></td>
                                     <td><%=vuelo.getDestino()%></td>
                                     <td><%=vuelo.getAerolinea()%></td>

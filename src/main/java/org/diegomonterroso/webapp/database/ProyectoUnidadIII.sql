@@ -5,8 +5,7 @@ create database if not exists ProyectoUnidadIII;
 use ProyectoUnidadIII;
 
 create table Vuelos(
-	vueloId int not null auto_increment,
-    numeroVuelo int not null,
+    vueloId int not null auto_increment,
     origen varchar(100) not null,
     destino varchar(100) not null,
     aerolinea varchar(100) not null,
@@ -62,3 +61,4 @@ select * from Clases;
 select * from Aviones;
 
 Set global time_zone = '-6:00';
+select * from Vuelos;

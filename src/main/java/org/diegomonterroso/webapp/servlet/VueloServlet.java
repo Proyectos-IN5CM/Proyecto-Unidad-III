@@ -30,4 +30,23 @@ public class VueloServlet extends HttpServlet{
         req.setAttribute("vuelos",vuelos);
         req.getRequestDispatcher("/lista-vuelos/lista-vuelos.jsp").forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String path = req.getPathInfo();
+        
+        if (path == null || path.equals("/")) {
+            agregarVuelo(req, resp);
+        }
+    }
+    
+    public void agregarVuelo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        String origen = req.getParameter("origen");
+        String destino = req.getParameter("destino");
+        String aerolinea = req.getParameter("aerolinea");
+        
+        vs.agregarVuelo(new Vuelo(origen, destino, aerolinea));
+        
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
+    }
 }

@@ -7,7 +7,7 @@ public interface IVueloService {
     
     public List<Vuelo> listarVuelos();
     
-    public void agregarVuelo();
+    public void agregarVuelo(Vuelo vuelo);
     
     public void eliminarVuelo(int vueloId);
     

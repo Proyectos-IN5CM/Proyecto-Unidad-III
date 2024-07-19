@@ -14,7 +14,6 @@ public class Vuelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int vueloId;
-    private int numeroVuelo;
     private String origen;
     private String destino;
     private String aerolinea;
@@ -22,16 +21,14 @@ public class Vuelo {
     public Vuelo() {
     }
 
-    public Vuelo(int numeroVuelo, String origen, String destino, String aerolinea) {
-        this.numeroVuelo = numeroVuelo;
+    public Vuelo(String origen, String destino, String aerolinea) {
         this.origen = origen;
         this.destino = destino;
         this.aerolinea = aerolinea;
     }
 
-    public Vuelo(int vueloId, int numeroVuelo, String origen, String destino, String aerolinea) {
+    public Vuelo(int vueloId, String origen, String destino, String aerolinea) {
         this.vueloId = vueloId;
-        this.numeroVuelo = numeroVuelo;
         this.origen = origen;
         this.destino = destino;
         this.aerolinea = aerolinea;
@@ -44,15 +41,7 @@ public class Vuelo {
     public void setVueloId(int vueloId) {
         this.vueloId = vueloId;
     }
-
-    public int getNumeroVuelo() {
-        return numeroVuelo;
-    }
-
-    public void setNumeroVuelo(int numeroVuelo) {
-        this.numeroVuelo = numeroVuelo;
-    }
-
+    
     public String getOrigen() {
         return origen;
     }
@@ -79,7 +68,7 @@ public class Vuelo {
 
     @Override
     public String toString() {
-        return "Vuelo{" + "vueloId=" + vueloId + ", numeroVuelo=" + numeroVuelo + ", origen=" + origen + ", destino=" + destino + ", aerolinea=" + aerolinea + '}';
+        return "Vuelo{" + "vueloId=" + vueloId + ", origen=" + origen + ", destino=" + destino + ", aerolinea=" + aerolinea + '}';
     }
     
     
