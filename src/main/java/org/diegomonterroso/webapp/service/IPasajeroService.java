@@ -7,7 +7,7 @@ public interface IPasajeroService {
     
     public List<Pasajero> listarPasajeros();
     
-    public void agregarPasajero();
+    public void agregarPasajero(Pasajero pasajero);
     
     public void eliminarPasajero(int pasajeroId);
     
