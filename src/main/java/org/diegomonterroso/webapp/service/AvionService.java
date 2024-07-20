@@ -19,8 +19,8 @@ public class AvionService implements IAvionService{
     }
 
     @Override
-    public void agregarAvion() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void agregarAvion(Avion avion) {
+        em.persist(avion);
     }
 
     @Override

@@ -30,4 +30,26 @@ public class AvionServlet extends HttpServlet{
         req.setAttribute("aviones",aviones);
         req.getRequestDispatcher("/lista-aviones/lista-aviones.jsp").forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String path = req.getContextPath();
+        
+        if(path == null || path.equals("/")){
+            agregarAvion(req, resp);
+        }
+    }
+    
+    public void agregarAvion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        String modelo = req.getParameter("modelo");
+        String capacidad = req.getParameter("capacidad");
+        String fecha = req.getParameter("fecha");
+        String aerolinea = req.getParameter("propiedad");
+        String estado = req.getParameter("estado");
+        
+        as.agregarAvion(new Avion(modelo, capacidad, fecha, aerolinea, estado));
+        
+        resp.sendRedirect("/ProyectoUnidadIII/index.jsp");
+    }
+    
 }
