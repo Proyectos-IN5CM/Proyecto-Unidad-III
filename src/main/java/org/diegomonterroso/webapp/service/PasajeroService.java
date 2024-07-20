@@ -21,8 +21,9 @@ public class PasajeroService implements IPasajeroService{
 
     @Override
     public void agregarPasajero(Pasajero pasajero) {
-       EntityTransaction transaction = em.getTransaction();
-         try{
+        EntityTransaction transaction = em.getTransaction();
+        
+        try{
             transaction.begin();
             em.persist(pasajero);
             transaction.commit();

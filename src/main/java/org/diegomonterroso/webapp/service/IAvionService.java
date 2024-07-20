@@ -7,7 +7,7 @@ public interface IAvionService {
     
     public List<Avion> listarAviones();
     
-    public void agregarAvion();
+    public void agregarAvion(Avion avion);
     
     public void eliminarAvion(int avionId);
     

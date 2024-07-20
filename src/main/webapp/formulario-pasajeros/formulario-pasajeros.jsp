@@ -27,10 +27,10 @@
                                 <a class="nav-link active" aria-current="page" href="../index.jsp">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="formulario-empleados.jsp">Formulario de Empleados</a>
+                                <a class="nav-link" href="formulario-pasajeros.jsp">Formulario de Pasajeros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../empleado-servlet">Lista de Empleados</a>
+                                <a class="nav-link" href="../pasajero-servlet">Lista de Pasajeros</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../formulario-vuelos/formulario-vuelos.jsp">Formulario de Vuelos</a>
@@ -51,10 +51,10 @@
                                 <a class="nav-link" href="../clase-servlet">Lista de Clases</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../formulario-pasajeros/formulario-pasajeros.jsp">Formulario de Pasajeros</a>
+                                <a class="nav-link" href="../formulario-empleados.jsp">Formulario de Empleados</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../pasajero-servlet">Lista de Pasajeros</a>
+                                <a class="nav-link" href="../empleado-servlet">Lista de Empleados</a>
                             </li>
                         </ul>
                     </div>
@@ -64,46 +64,46 @@
         <br>
         <br>
         <div>
-            <% ArrayList<String> pasajeros = (ArrayList) request.getAttribute("pasajero"); %>
+            <% ArrayList<String> pasajeros = (ArrayList) request.getAttribute("pasajeros"); %>
             <ul>
                 <% if (pasajeros != null) { %>
                 <p style="text-align: center" class="text-success display-5">Se agregó con éxito!</p>
                 <br>
-                <% for (String emp : pasajeros) {%>
-                <li style="text-align: center" class="mt-1";><%= emp%></li>
+                <% for (String pasa : pasajeros) {%>
+                <li style="text-align: center" class="mt-1";><%= pasa%></li>
                     <% } %>
                     <% }%>
             </ul>
         </div>
         <div class="container mt-5 w-75">
-            <form action="/ProyectoUnidadIII/empleado-servlet" method="post" enctype="multipart/form-data">
-                <div class="form-floating mt-4">
+            <form action="/ProyectoUnidadIII/pasajero-servlet" method="post" enctype="multipart/form-data">
+                <div class="form-floating mt-5">
                     <input class="form-control bg-info-subtle text-info-emphasis" id="nombre" name="nombre" type=text placeholder="">
-                    <label for="nombre">Nombre de Pasajero</label>
+                    <label for="nombre">Nombre del Pasajero</label>
                 </div>
-                <div class="form-floating mt-4">
-                    <input class="form-control bg-info-subtle text-info-emphasis" id="apellido" name="apellido"type=text placeholder="">
+                <div class="form-floating mt-5">
+                    <input class="form-control bg-info-subtle text-info-emphasis" id="apellido" name="apellido" type=text placeholder="">
                     <label for="apellido">Apellido del Pasajero</label>
                 </div>
-                <div class="form-floating mt-4">
-                    <input class="form-control bg-info-subtle text-info-emphasis" id="FechaNacimiento" name="FechaNacimiento" type=text placeholder="">
-                    <label for="FechaNacimiento">Fecha de Nacimiento del Pasajero</label>
+                <div class="form-floating mt-5">
+                    <input class="form-control bg-info-subtle text-info-emphasis" id="fechaNacimiento" name="fechaNacimiento" type=text placeholder="">
+                    <label for="fechaNacimiento">Fecha de Nacimiento del Pasajero</label>
                 </div>
-                <div class="form-floating mt-4">
+                <div class="form-floating mt-5">
                     <input class="form-control bg-info-subtle text-info-emphasis" id="nacionalidad" name="nacionalidad" type=text placeholder="">
-                    <label for="nacionalidad">nacionalidad del Pasajero</label>
+                    <label for="nacionalidad">Nacionalidad del Pasajero</label>
                 </div>
-                <div class="form-floating mt-4">
+                <div class="form-floating mt-5">
                     <input class="form-control bg-info-subtle text-info-emphasis" id="pasaporte" name="pasaporte" type=text placeholder="">
-                    <label for="pasaporte">pasaporte del Pasajero</label>
+                    <label for="pasaporte">Pasaporte del Pasajero</label>
                 </div>
-                <div class="form-floating mt-4">
+                <div class="form-floating mt-5">
                     <input class="form-control bg-info-subtle text-info-emphasis" id="contactoTelefono" name="contactoTelefono" type=text placeholder="">
-                    <label for="contactoTelefono">contacto Telefonico del Pasajero</label>
+                    <label for="contactoTelefono">Contacto Telefonico del Pasajero</label>
                 </div>
-                <div class="form-floating mt-4">
+                <div class="form-floating mt-5">
                     <input class="form-control bg-info-subtle text-info-emphasis" id="contactoEmail" name="contactoEmail" type=text placeholder="">
-                    <label for="contactoEmail">Contacto Email del Empleado</label>
+                    <label for="contactoEmail">Contacto Email del Pasajero</label>
                 </div>
                 <div class="form-floating mt-4">
                     <input class="btn btn-success" type="submit" value="Agregar">

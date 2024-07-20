@@ -28,20 +28,20 @@ public class PasajeroServlet extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Pasajero> pasajeros = ps.listarPasajeros();
         req.setAttribute("pasajeros",pasajeros);
-        req.getRequestDispatcher("./formulario-pasajeros/formulario-pasajeros.jsp").forward(req, resp); 
+        req.getRequestDispatcher("/lista-pasajeros/lista-pasajeros.jsp").forward(req, resp);
     }
-
+    
+    // Agregar, eliminar, editar
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       String path = req.getPathInfo();
+        String path = req.getPathInfo();
         
         if(path == null || path.equals("/")){
             agregarPasajero(req, resp);
-        
-            }
-    } 
-      public void agregarPasajero(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       
+        }
+    }
+    
+    public void agregarPasajero(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String nombre = req.getParameter("nombre");
         String apellido = req.getParameter("apellido");
         String fechaNacimiento = req.getParameter("fechaNacimiento");
@@ -49,11 +49,12 @@ public class PasajeroServlet extends HttpServlet{
         String pasaporte = req.getParameter("pasaporte");
         String contactoTelefono = req.getParameter("contactoTelefono");
         String contactoEmail = req.getParameter("contactoEmail");
-                        
-        ps.agregarPasajero(new Pasajero(nombre, apellido, fechaNacimiento, nacionalidad, pasaporte, contactoTelefono,contactoEmail));
-   
-      
+        
+        ps.agregarPasajero(new Pasajero(nombre, apellido, fechaNacimiento, nacionalidad, pasaporte, contactoTelefono, contactoEmail));
+        
+        // Otra manera
+        // resp.sendRedirect("/SGBDProductos/index.jsp");
         
         resp.sendRedirect(req.getContextPath() + "/index.jsp");
+    }
 }
-      }

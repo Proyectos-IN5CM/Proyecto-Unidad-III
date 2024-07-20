@@ -15,7 +15,6 @@ public class Avion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int avionId;
     private String modelo;
-    private int capacidadPasajeros;
     private String fechaFabricacion;
     private String aerolineaPropietaria;
     private String estadoAvion;
@@ -23,21 +22,23 @@ public class Avion {
     public Avion() {
     }
 
-    public Avion(String modelo, int capacidadPasajeros, String fechaFabricacion, String aerolineaPropietaria, String estadoAvion) {
+    public Avion(String modelo, String fechaFabricacion, String aerolineaPropietaria, String estadoAvion) {
         this.modelo = modelo;
-        this.capacidadPasajeros = capacidadPasajeros;
         this.fechaFabricacion = fechaFabricacion;
         this.aerolineaPropietaria = aerolineaPropietaria;
         this.estadoAvion = estadoAvion;
     }
 
-    public Avion(int avionId, String modelo, int capacidadPasajeros, String fechaFabricacion, String aerolineaPropietaria, String estadoAvion) {
+    public Avion(int avionId, String modelo, String fechaFabricacion, String aerolineaPropietaria, String estadoAvion) {
         this.avionId = avionId;
         this.modelo = modelo;
-        this.capacidadPasajeros = capacidadPasajeros;
         this.fechaFabricacion = fechaFabricacion;
         this.aerolineaPropietaria = aerolineaPropietaria;
         this.estadoAvion = estadoAvion;
+    }
+
+    public Avion(String modelo, String capacidad, String fecha, String aerolinea, String estado) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getAvionId() {
@@ -54,14 +55,6 @@ public class Avion {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
-    }
-
-    public int getCapacidadPasajeros() {
-        return capacidadPasajeros;
-    }
-
-    public void setCapacidadPasajeros(int capacidadPasajeros) {
-        this.capacidadPasajeros = capacidadPasajeros;
     }
 
     public String getFechaFabricacion() {
@@ -90,7 +83,7 @@ public class Avion {
 
     @Override
     public String toString() {
-        return "Avion{" + "avionId=" + avionId + ", modelo=" + modelo + ", capacidadPasajeros=" + capacidadPasajeros + ", fechaFabricacion=" + fechaFabricacion + ", aerolineaPropietaria=" + aerolineaPropietaria + ", estadoAvion=" + estadoAvion + '}';
+        return "Avion{" + "avionId=" + avionId + ", modelo=" + modelo + ", fechaFabricacion=" + fechaFabricacion + ", aerolineaPropietaria=" + aerolineaPropietaria + ", estadoAvion=" + estadoAvion + '}';
     }
     
     
