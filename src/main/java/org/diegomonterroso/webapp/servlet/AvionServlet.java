@@ -30,26 +30,29 @@ public class AvionServlet extends HttpServlet{
         req.setAttribute("aviones",aviones);
         req.getRequestDispatcher("/lista-aviones/lista-aviones.jsp").forward(req, resp);
     }
-
+    
+    // Agregar, eliminar, editar
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String path = req.getContextPath();
+        String path = req.getPathInfo();
         
         if(path == null || path.equals("/")){
             agregarAvion(req, resp);
         }
     }
     
-    public void agregarAvion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+    public void agregarAvion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String modelo = req.getParameter("modelo");
-        String capacidad = req.getParameter("capacidad");
-        String fecha = req.getParameter("fecha");
-        String aerolinea = req.getParameter("propiedad");
-        String estado = req.getParameter("estado");
+        String fechaFabricacion = req.getParameter("fechaFabricacion");
+        String aerolineaPropietaria = req.getParameter("aerolineaPropietaria");
+        String estadoAvion = req.getParameter("estadoAvion");
         
-        as.agregarAvion(new Avion(modelo, capacidad, fecha, aerolinea, estado));
+        as.agregarAvion(new Avion(modelo, fechaFabricacion, aerolineaPropietaria, estadoAvion));
         
-        resp.sendRedirect("/ProyectoUnidadIII/index.jsp");
+        // Otra manera
+        // resp.sendRedirect("/SGBDProductos/index.jsp");
+        
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
     }
     
 }

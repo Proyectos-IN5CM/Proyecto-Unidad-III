@@ -12,7 +12,7 @@
     <body>
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Agregar Avion!</a>
+                <a class="navbar-brand" href="#">Agregar Aviones!</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -45,7 +45,7 @@
                                 <a class="nav-link" href="../clase-servlet">Lista de Clases</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="formulario-empleados.jsp">Formulario de Empleados</a>
+                                <a class="nav-link" href="../formulario-empleados.jsp">Formulario de Empleados</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../empleado-servlet">Lista de Empleados</a>
@@ -69,33 +69,29 @@
                 <% if (aviones != null) { %>
                 <p style="text-align: center" class="text-success display-5">Se agregó con éxito!</p>
                 <br>
-                <% for (String vue : aviones) {%>
-                <li style="text-align: center" class="mt-1";><%= vue%></li>
+                <% for (String avi : aviones) {%>
+                <li style="text-align: center" class="mt-1";><%= avi%></li>
                     <% } %>
                     <% }%>
             </ul>
         </div>
         <div class="container mt-5 w-75">
             <form action="/ProyectoUnidadIII/avion-servlet" method="post" enctype="multipart/form-data">
-                <div class="form-floating mt-4">
-                    <textarea class="form-control bg-info-subtle text-info-emphasis" placeholder="" id="modelo" name="modelo"></textarea>
-                    <label for="origen">Modelo de Avión</label>
+                <div class="form-floating mt-5">
+                    <input class="form-control bg-info-subtle text-info-emphasis" id="modelo" name="modelo" type=text placeholder="">
+                    <label for="modelo">Modelo de Avión</label>
                 </div>
-                <div class="form-floating mt-4">
-                    <input class="form-control bg-info-subtle text-info-emphasis" id="capacidad" name="capacidad" type=text placeholder="">
-                    <label for="aerolinea">Capacidad de Pasajeros</label>
+                <div class="form-floating mt-5">
+                    <input class="form-control bg-info-subtle text-info-emphasis" id="fechaFabricacion" name="fechaFabricacion" type=text placeholder="">
+                    <label for="fechaFabricacion">Fecha de Fabricación del Avión</label>
                 </div>
-                <div class="form-floating mt-4">
-                    <input class="form-control bg-info-subtle text-info-emphasis" id="fecha" name="fecha" type=text placeholder="">
-                    <label for="destino">Fecha de Fabricación</label>
+                <div class="form-floating mt-5">
+                    <input class="form-control bg-info-subtle text-info-emphasis" id="aerolineaPropietaria" name="aerolineaPropietaria" type=text placeholder="">
+                    <label for="aerolineaPropietaria">Aerolinea propietaria del Avión</label>
                 </div>
-                <div class="form-floating mt-4">
-                    <input class="form-control bg-info-subtle text-info-emphasis" id="propiedad" name="propiedad" type=text placeholder="">
-                    <label for="aerolinea">Aerolinea Propietaria</label>
-                </div>
-                <div class="form-floating mt-4">
-                    <input class="form-control bg-info-subtle text-info-emphasis" id="estado" name="estado" type=text placeholder="">
-                    <label for="aerolinea">Estado del Avion</label>
+                <div class="form-floating mt-5">
+                    <input class="form-control bg-info-subtle text-info-emphasis" id="estadoAvion" name="estadoAvion" type=text placeholder="">
+                    <label for="estadoAvion">Estado del Avión</label>
                 </div>
                 <div class="form-floating mt-4">
                     <input class="btn btn-success" type="submit" value="Agregar">

@@ -46,7 +46,6 @@ create table Clases (
 create table Aviones (
     avionId int not null auto_increment,
     modelo varchar(100) not null,
-    capacidadPasajeros int not null,
     fechaFabricacion varchar(10),
     aerolineaPropietaria varchar(100) not null,
     estadoAvion varchar(50) not null,

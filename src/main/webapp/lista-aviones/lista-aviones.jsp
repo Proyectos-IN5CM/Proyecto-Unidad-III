@@ -69,9 +69,8 @@
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Modelo De Avión</th>
-                            <th scope="col">Capacidad De Pasajeros</th>
-                            <th scope="col">Fecha De Fabricación</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Fecha de Fabricación</th>
                             <th scope="col">Aerolinea Propietaria</th>
                             <th scope="col">Estado</th>
                         </tr>
@@ -83,7 +82,6 @@
                                 <tr>
                                     <th scope="row"><%=avion.getAvionId()%></th>
                                     <td><%=avion.getModelo()%></td>
-                                    <td><%=avion.getCapacidadPasajeros()%></td>
                                     <td><%=avion.getFechaFabricacion()%></td>
                                     <td><%=avion.getAerolineaPropietaria()%></td>
                                     <td><%=avion.getEstadoAvion()%></td>
