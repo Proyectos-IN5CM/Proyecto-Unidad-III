@@ -1,6 +1,7 @@
 package org.diegomonterroso.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.diegomonterroso.webapp.model.Avion;
 import org.diegomonterroso.webapp.util.JpaUtil;
@@ -20,7 +21,18 @@ public class AvionService implements IAvionService{
 
     @Override
     public void agregarAvion(Avion avion) {
-        em.persist(avion);
+        EntityTransaction transaction = em.getTransaction();
+        
+        try{
+            transaction.begin();
+            em.persist(avion);
+            transaction.commit();
+        }catch(Exception e){
+            if(transaction.isActive()){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
     }
 
     @Override
